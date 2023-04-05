@@ -10,7 +10,7 @@
     "start": "next start "
   },
   "dependencies": {
-    "logger": "workspace:*",
+    "utils": "workspace:*",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

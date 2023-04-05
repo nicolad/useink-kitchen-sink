@@ -1,5 +1,5 @@
-import { log } from "logger";
 import Head from "next/head";
+import { log } from "utils";
 import { CounterButton, NewTabLink } from "ui";
 
 export default function Store() {
