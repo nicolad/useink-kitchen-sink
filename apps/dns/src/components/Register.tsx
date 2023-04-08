@@ -25,7 +25,9 @@ export const Register = () => {
       const name = form.values.name;
       const hash = blake2AsHex(name);
 
-      await registerTx.signAndSend([hash], { value: 0, gasLimit: 1000000000000 });
+      const result = await registerTx.signAndSend([hash]);
+
+      console.log('hash', hash);
 
       form.reset();
     } catch (e: any) {
