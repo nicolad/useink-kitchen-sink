@@ -50,51 +50,8 @@ importers:
         specifier: 5.0.2
         version: 5.0.2
       useink:
-        specifier: ^0.1.0-beta.6
-        version: 0.1.0-beta.6(@polkadot/util-crypto@11.1.3)(@polkadot/util@11.1.3)(react@18.2.0)
-      web3:
-        specifier: workspace:*
-        version: link:../../packages/web3
-    devDependencies:
-      eslint-config-prettier:
-        specifier: ^8.8.0
-        version: 8.8.0(eslint@8.36.0)
-
-  apps/useink-dns:
-    dependencies:
-      '@mantine/core':
-        specifier: ^6.0.6
-        version: 6.0.6(@emotion/react@11.10.6)(@mantine/hooks@6.0.6)(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
-      '@types/node':
-        specifier: 18.15.6
-        version: 18.15.6
-      '@types/react':
-        specifier: 18.0.28
-        version: 18.0.28
-      '@types/react-dom':
-        specifier: 18.0.11
-        version: 18.0.11
-      eslint:
-        specifier: 8.36.0
-        version: 8.36.0
-      eslint-config-next:
-        specifier: 13.2.4
-        version: 13.2.4(eslint@8.36.0)(typescript@5.0.2)
-      next:
-        specifier: 13.2.4
-        version: 13.2.4(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
-      typescript:
-        specifier: 5.0.2
-        version: 5.0.2
-      useink:
-        specifier: ^0.1.0-beta.6
-        version: 0.1.0-beta.6(@polkadot/util-crypto@11.1.3)(@polkadot/util@11.1.3)(react@18.2.0)
+        specifier: ^0.1.0-beta.7
+        version: 0.1.0-beta.7(@polkadot/util-crypto@11.1.3)(@polkadot/util@11.1.3)(react@18.2.0)
       web3:
         specifier: workspace:*
         version: link:../../packages/web3
@@ -208,8 +165,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       useink:
-        specifier: ^0.1.0-beta.6
-        version: 0.1.0-beta.6(@polkadot/util-crypto@11.1.3)(@polkadot/util@11.1.3)(react@18.2.0)
+        specifier: ^0.1.0-beta.7
+        version: 0.1.0-beta.7(@polkadot/util-crypto@11.1.3)(@polkadot/util@11.1.3)(react@18.2.0)
     devDependencies:
       '@types/jest':
         specifier: ^26.0.22
@@ -7317,8 +7274,8 @@ packages:
     resolution: {integrity: sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==}
     engines: {node: '>=0.10.0'}
 
-  /useink@0.1.0-beta.6(@polkadot/util-crypto@11.1.3)(@polkadot/util@11.1.3)(react@18.2.0):
-    resolution: {integrity: sha512-m1KT2UNsOIquHq6swLSgjVEpF1bIfeiOhXBi5YWMvQZqqgQ06pslwbC/BOspoIYnb98RAz5joi+8gO20X53g4A==}
+  /useink@0.1.0-beta.7(@polkadot/util-crypto@11.1.3)(@polkadot/util@11.1.3)(react@18.2.0):
+    resolution: {integrity: sha512-og5uZedUcGzFd5Nn91o+wk70R14+1iZGwL6En47qPOqPWd5WqDTm4VL9ZjHALiecPxxPWuh9hpywvVHZ4vBDvw==}
     peerDependencies:
       react: ^17.0.0
     dependencies:

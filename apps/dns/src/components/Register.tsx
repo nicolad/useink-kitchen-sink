@@ -9,7 +9,8 @@ import { ADDRESS } from '../constants';
 
 export const Register = () => {
   const { account } = useExtension();
-  const contract = useContract(ADDRESS, metadata);
+  const ctr = useContract(ADDRESS, metadata, 'AlephZeroTestnet');
+  const contract = ctr?.contract;
   const registerTx = useContractTx(contract, 'register');
 
   const [updateIsLoading, setUpdateIsLoading] = useState<boolean>();
@@ -25,9 +26,9 @@ export const Register = () => {
       const name = form.values.name;
       const hash = blake2AsHex(name);
 
-      const result = await registerTx.signAndSend([hash]);
+      await registerTx.signAndSend([name]);
 
-      console.log('hash', hash);
+      console.log('result', registerTx.result);
 
       form.reset();
     } catch (e: any) {

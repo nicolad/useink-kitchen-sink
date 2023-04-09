@@ -24,12 +24,14 @@ type MoodResult = { Ok?: { mood: string }; Err?: { BadMood: { mood: string } } }
 
 export const HomePage: React.FC = () => {
   const { account } = useExtension();
-  const block = useBlockHeader();
+  const block = useBlockHeader('AlephZeroTestnet');
   const balance = useBalance(account);
-  const contract = useContract(ADDRESS, metadata);
+  const alephContract = useContract(ADDRESS, metadata, 'AlephZeroTestnet');
+
+  const contract = alephContract?.contract;
+
   const get = useCall<boolean>(contract, 'get');
-  const getSubcription = useCallSubscription<boolean>(contract, 'get');
-  const flipTx = useContractTx(contract, 'flip');
+  const flipTx = useContractTx(alephContract?.contract, 'flip');
   const flipDryRun = useDryRun(contract, 'flip');
   const flipPaymentInfo = useTxPaymentInfo(contract, 'flip');
   const panic = useCall<boolean>(contract, 'panic');
@@ -86,13 +88,6 @@ export const HomePage: React.FC = () => {
                 </button>
 
                 <h3 className="text-xl">Value: {get.result?.ok ? get.result.value.decoded.toString() : '--'}</h3>
-              </li>
-
-              <li className="flex items-center gap-4">
-                <h3 className="text-xl">
-                  get() will update on new blocks:{' '}
-                  {getSubcription.result?.ok ? getSubcription.result.value.decoded.toString() : '--'}
-                </h3>
               </li>
 
               <li className="flex flex-col gap-4">
