@@ -17,7 +17,7 @@ export const GiveMe = () => {
   const form = useForm<{ name: string }>();
   const theme = useMantineTheme();
 
-  const register = async () => {
+  const onSubmit = async () => {
     if (!account || !contract) {
       return;
     }
@@ -27,14 +27,9 @@ export const GiveMe = () => {
 
       await registerTx.signAndSend([name]);
 
-      console.log('result', registerTx);
-
       form.reset();
     } catch (e: any) {
-      if (e?.errorMessage?.includes('NameAlreadyExists')) {
-        form.setFieldError('name', 'Name already exists');
-        return;
-      }
+      form.setFieldError('name', 'error');
     } finally {
       setUpdateIsLoading(false);
     }
@@ -44,13 +39,13 @@ export const GiveMe = () => {
 
   return (
     <Card shadow="sm" padding={theme.spacing.md}>
-      <Text size="lg">Register</Text>
+      <Text size="lg">Give me</Text>
       <Divider size="sm" my={20} />
       {!!account && (
         <form>
           <TextInput label="Name" disabled={updateIsLoading} {...form.getInputProps('name')} />
           <Divider size="sm" my={20} />
-          <Button variant="outline" disabled={updateIsLoading} onClick={register} loading={updateIsLoading}>
+          <Button variant="outline" disabled={updateIsLoading} onClick={onSubmit} loading={updateIsLoading}>
             Register
           </Button>
         </form>

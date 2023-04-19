@@ -27,11 +27,9 @@ export const WasItTen = () => {
     try {
       const value = form.values.value;
 
-      await wasItTenTx.signAndSend([], {
+      const result = await wasItTenTx.signAndSend([], {
         value: value,
       });
-
-      console.log('result', wasItTenTx);
     } catch (e: any) {
       form.setFieldError('value', "The value wasn't 10");
     } finally {
