@@ -1,0 +1,6 @@
+[submodule "packages/packages/useink-dev"]
+	path = packages/packages/useink-dev
+	url = https://github.com/nicolad/useink
+[submodule "packages/useink-dev"]
+	path = packages/useink-dev
+	url = git@github.com:nicolad/useink.git
